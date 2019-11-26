@@ -1,0 +1,4 @@
+.DS_Store
+.vscode/
+javascript-exercises.code-workspace
+node_modules
