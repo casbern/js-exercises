@@ -5,8 +5,7 @@ function showStars(rows) {
 
   for(let i = 1 ; i <= rows; i++) {
     stars = stars.concat('*') 
+    stars += '*'
     console.log(stars)
   }
 }
-
-
