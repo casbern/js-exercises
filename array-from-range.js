@@ -1,9 +1,9 @@
 function arrayFromRange(min, max) {
   let output = []
 
-  for (let i = 0; i < max; i++) {
+  for (let i = min; i <= max; i++) {
 
-    output.push(i + 1)
+    output.push(i)
 
     console.log(`after`)
     console.log(output)
@@ -13,6 +13,8 @@ function arrayFromRange(min, max) {
   return output
 
 }
+
+//const numbers = arrayFromRange(-10, -4)
 
 const numbers = arrayFromRange(1, 4)
 console.log(numbers)
