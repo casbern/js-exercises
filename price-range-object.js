@@ -10,3 +10,7 @@ let restaurants = [
   {name: "Steak House", averagePerPerson: 15},
 
 ]
+
+function restaurantsInsideBuget(price, restaurants) {
+  
+}
