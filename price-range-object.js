@@ -11,6 +11,6 @@ let restaurants = [
 
 ]
 
-function restaurantsInsideBuget(price, restaurants) {
-  
+function restaurantsInsideBuget(priceRange, restaurants) {
+
 }
