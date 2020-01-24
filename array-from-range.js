@@ -1,10 +1,10 @@
 function arrayFromRange(min, max) {
   let output = []
 
-  for(n of max) {
-    if(n <= max) {
+  for(let i = 0; i <= max; i++) {
+    
       output.push(n + 1)
-    }
+    
     return output
   }
 }
