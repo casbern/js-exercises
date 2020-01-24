@@ -10,8 +10,9 @@ function arrayFromRange(min, max) {
     console.log(`after`)
     console.log(output)
 
-    return output
   }
+  return output
+
 }
 
 const numbers = arrayFromRange(1, 4)
