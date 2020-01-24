@@ -1,7 +1,7 @@
 function arrayFromRange(min, max) {
   let output = []
 
-  for (let i = 0; i <= max; i++) {
+  for (let i = 0; i < max; i++) {
 
     output.push(i + 1)
 
