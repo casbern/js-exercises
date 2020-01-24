@@ -3,7 +3,7 @@ function arrayFromRange(min, max) {
 
   for(let i = 0; i <= max; i++) {
     
-      output.push(n + 1)
+      output.push(i + 1)
     
     return output
   }
