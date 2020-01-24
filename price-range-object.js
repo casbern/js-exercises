@@ -5,5 +5,8 @@ const priceRanges = [
 ];
 
 let restaurants = [
-  {averagePerPerson: 5}
+  {name: "Cookingood", averagePerPerson: 5},
+  {name: "Delicias da Vovo", averagePerPerson: 50},
+  {name: "Steak House", averagePerPerson: 15},
+
 ]
