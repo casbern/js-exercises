@@ -1,6 +1,6 @@
 const numbers = [1,2,3,4]
 
-const output = move(numbers, 1, 3)
+const output = move(numbers, 1, 2)
 
 console.log(output)
 
