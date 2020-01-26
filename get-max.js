@@ -1,4 +1,4 @@
-const numbers = [1, 2, 3, 4, 5, 10]
+const numbers = [1, 2, 3, 4, 5, 100, 1500]
 
 const max = getMax(numbers)
 
@@ -20,6 +20,6 @@ function getMax(array) {
     if (currentValue > maxNum) {
       maxNum = currentValue
     }
+    return maxNum
   }, 0)
-  return maxNum
 }
