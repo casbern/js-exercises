@@ -6,7 +6,7 @@ console.log(output)
 
 function move(array, index, offset) {
   const position = index + offset
-  if (postion >= array.length || position < 0) {
+  if (position >= array.length || position < 0) {
     console.error("Invalid offset")
     return
   }
