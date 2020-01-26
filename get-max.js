@@ -14,12 +14,16 @@ console.log(max)
 //   return max
 // }
 
+// function getMax(array) {
+//   let maxNum = 0
+//   return array.reduce(function (accumulator, currentValue) {
+//     if (currentValue > maxNum) {
+//       maxNum = currentValue
+//     }
+//     return maxNum
+//   }, 0)
+// }
+
 function getMax(array) {
-  let maxNum = 0
-  return array.reduce(function (accumulator, currentValue) {
-    if (currentValue > maxNum) {
-      maxNum = currentValue
-    }
-    return maxNum
-  }, 0)
+  return array.reduce((a,b) => (a > b) ? a : b)
 }
