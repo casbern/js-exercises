@@ -8,7 +8,7 @@ const numbers = [1, 2, 3, 4, 1, 1, 1]
 //   let sum = 0
 //   for (n of array) {
 //     if (n === searchElement) {
-//       sum += n
+//       sum++
 //     }
 //   }
 //   return sum
@@ -19,10 +19,10 @@ const numbers = [1, 2, 3, 4, 1, 1, 1]
 function countOccurrences (array, searchElement) {
  return array.reduce(function (accumulator, currentValue){
     if (currentValue === searchElement) {
-      accumulator += currentValue
+      accumulator ++
     }
     return accumulator
   },0)
 }
 
-console.log(countOccurrences(numbers,1))
+console.log(countOccurrences(numbers,5))
