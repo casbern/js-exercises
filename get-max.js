@@ -5,13 +5,13 @@ const max = getMax(numbers)
 console.log(max)
 
 // function getMax(array) {
-//   let onHold = 0
+//   let max = 0
 //   for(item of array) {
-//     if(item > onHold) {
-//       onHold = item
+//     if(item > max) {
+//       max = item
 //     }
 //   }
-//   return onHold
+//   return max
 // }
 
 function getMax(array) {
