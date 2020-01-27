@@ -6,6 +6,11 @@ console.log(output)
 
 function move(array, index, offset) {
   const position = index + offset
+
+  console.log(`this is the value of the index = ${index}`)
+  console.log(`this is the value of the offset = ${offset}`)
+  console.log(`this is the value of the position = ${position}`)
+
   if (position >= array.length || position < 0) {
     console.error("Invalid offset")
     return
@@ -13,7 +18,10 @@ function move(array, index, offset) {
 
 
   const output = [...array]
-  const element = output.slice(index, 1)[0]
+  const element = output.splice(index, 1)[0]
+
+  console.log(`this is the value of the variable element = ${element}`)
+  
   output.splice(position, 0, element)
   return output
 
