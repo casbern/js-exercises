@@ -5,7 +5,7 @@ const max = getMax(numbers)
 console.log(max)
 
 // function getMax(array) {
-//   let max = 0
+//   let max = array[0]
 //   for(item of array) {
 //     if(item > max) {
 //       max = item
