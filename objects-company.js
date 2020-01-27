@@ -1,3 +1,6 @@
+//1. Create a JavaScript object with the properties you'd like, that represents a company.
+//Make three objects that each represents another company.
+
 const companies = [{
     name: "Google",
     income: 100,
@@ -15,13 +18,17 @@ const companies = [{
   }
 ]
 
-
+// ==== FUNCTION CALLS ====
 console.log(showInfo(companies))
 console.log(average(companies))
 console.log(maxOfIncome(companies))
 
 
 
+// ==== EXERCISES ====
+
+// 3. Iterate through the array, and console.log the name of each company
+// 4. Iterate through the array and console.log the income of each company
 function showInfo(companies) {
   for (company of companies) {
     console.log(`Name: ${company.name}`)
@@ -29,6 +36,7 @@ function showInfo(companies) {
   }
 }
 
+//5. Make a function that calculates the average of the income of the three companies.
 function average(companies) {
   let output = 0
   for (company of companies) {
@@ -37,6 +45,7 @@ function average(companies) {
   return output
 }
 
+//6. Make a function that calculates the max of the income of the three companies.
 function maxOfIncome(companies) {
   let max = 0
   for (company of companies) {
