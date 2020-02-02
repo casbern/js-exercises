@@ -37,21 +37,49 @@ function showInfo(companies) {
 }
 
 //5. Make a function that calculates the average of the income of the three companies.
+// function average(companies) {
+//   let output = 0
+//   for (company of companies) {
+//     output += company.income 
+//   }
+//   output /= companies.length
+//   return output
+// }
+
+// ===== Solution exercise 5 using reduce method =====
+
 function average(companies) {
-  let output = 0
-  for (company of companies) {
-    output += company.income
-  }
-  return output
+  
+  return companies.reduce(function (accumulator, object) {
+    return accumulator + object.income    
+  },0) / companies.length
+  
 }
 
 //6. Make a function that calculates the max of the income of the three companies.
+// function maxOfIncome(companies) {
+//   let max = 0
+//   let selectedCompany
+//   for (company of companies) {
+//     if (company.income > max) {
+//       max = company.income
+//       selectedCompany = company
+//     }
+//   }
+//   return {nome: selectedCompany.name, income: selectedCompany.income}
+// }
+
+// ===== Solution exercise 6 using reduce method =====
+
 function maxOfIncome(companies) {
-  let max = 0
-  for (company of companies) {
-    if (company.income > max) {
-      max = company.income
-    }
-  }
-  return `the ${company.name} has the biggest income of ${max}`
+  return companies.reduce(function(accumulator, object) {
+    
+    return Math.max(accumulator, object.income)
+  },0)
 }
+
+// ==== How reduce works ====
+// let arr = [1,2,3,4]
+// console.log(arr.reduce(function(arr, cur) {
+//   return arr + cur
+// },0))
