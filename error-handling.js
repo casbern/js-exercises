@@ -7,7 +7,7 @@ try {
   console.log(count)
 } 
 catch (e) {
-  console.log(e)
+  console.log(e.message) //display of the error message of the object. All functions are objects that is why we use .message???
 }
 
 
