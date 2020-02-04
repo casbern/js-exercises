@@ -19,12 +19,12 @@ function countOccurrences(array, searchElement) {
 
   return array.reduce((accumulator, current) => {
 
-    console.log(`this is the accumulator ${accumulator}`)
-    console.log(`this is the current ${current}`)
+    //console.log(`this is the accumulator ${accumulator}`)
+    //console.log(`this is the current ${current}`)
 
     const occurrence = (current === searchElement) ? 1 : 0
 
-    console.log(`this is the occurrence ${occurrence}`)
+    //console.log(`this is the occurrence ${occurrence}`)
 
     return accumulator + occurrence
   },0)
