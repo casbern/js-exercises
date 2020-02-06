@@ -1,14 +1,14 @@
 $(document).ready(function() {
+  let hasImage = true
 
   $('button').on('click', function() {
 
     //console.log('i was clicked')
 
-    let hasImage = true
 
     if(hasImage) {
       //remove image
-      console.log('click to show')
+      console.log('click to hide')
 
       $('button').css('background-color', 'darkgray')
       $('img').addClass('hide')
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     } else {
       //add image
-      console.log('click to hide')
+      console.log('click to show')
 
       $('button').css('background-color', 'brown')
       $('img').removeClass('hide')
