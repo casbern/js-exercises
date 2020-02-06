@@ -1,0 +1,7 @@
+p {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 32px;
+  color: red; /* this color is overwritten by jquery */
+}
