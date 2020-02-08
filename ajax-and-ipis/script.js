@@ -10,6 +10,7 @@ $(document).ready(function() {
     xhr.onload = function() {
         if (xhr.status === 200) {
             const result = xhr.responseText
+            const result = JSON.parse(xhr.responseText) 
             $('p').text(result)
             console.log(result)
         }
