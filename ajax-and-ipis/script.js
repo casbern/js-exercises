@@ -9,7 +9,7 @@ $(document).ready(function() {
     
     xhr.onload = function() {
         if (xhr.status === 200) {
-            const result = JSON.parse(xhr.responseText)
+            const result = xhr.responseText
             $('p').text(result)
             console.log(result)
         }
