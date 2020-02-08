@@ -3,6 +3,7 @@ $(document).ready(function() {
   $('button').on('click', function() {
 
     var xhr = new XMLHttpRequest();
+    console.log(xhr)
     xhr.open("GET", "https://api.github.com/users/cah90", true);
     xhr.send(null);
     
