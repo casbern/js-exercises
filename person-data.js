@@ -14,9 +14,6 @@ const persons = [{
   sex: "feminine"
 }]
 
-
-  
-
   const getPerson = function (persons,name) {
   
   for( person of persons) {
