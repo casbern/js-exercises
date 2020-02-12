@@ -2,8 +2,9 @@
 
 const fs = require('fs')
 
+module.export = {
 
-function File (filePath) {
+function File(filePath) {
 
   this.filePath = filePath
 
@@ -21,16 +22,21 @@ function File (filePath) {
   }
 
   this.moveTo = function moveTo(pathName) {
-   return fs.rename(this.filePath, pathName, function(err) {
-     if (err) {
-       throw err
-     }
-   })
+    return fs.rename(this.filePath, pathName, function (err) {
+      if (err) {
+        throw err
+      }
+    })
   }
 
 }
 
-const myFile = new File("/Users/cassiabernardo/Dev/js-training/objects.js")
+}
+
+  const myFile = new File("/Users/cassiabernardo/Dev/js-training/objects.js")
+
+
+
 
 //console.log(myFile.filePath)
 
