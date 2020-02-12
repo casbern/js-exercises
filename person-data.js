@@ -14,7 +14,10 @@ const persons = [{
   sex: "feminine"
 }]
 
-function getPerson(persons,name) {
+
+  
+
+  const getPerson = function (persons,name) {
   
   for( person of persons) {
 
@@ -26,6 +29,9 @@ function getPerson(persons,name) {
     return "this name is not available"     
 }
 
-console.log(getPerson(persons,"Luana"))
-console.log(getPerson(persons,"Ricardo"))
-console.log(getPerson(persons,"Erica"))
+module.exports = getPerson
+
+
+//console.log(getPerson(persons,"Luana"))
+//console.log(getPerson(persons,"Ricardo"))
+//console.log(getPerson(persons,"Erica"))
