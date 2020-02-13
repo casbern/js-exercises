@@ -20,3 +20,9 @@ const circle1 = new Circle(2)
 Circle.prototype.toString = function () {
   return "Circle with radius" + this.radius
 } //this one will be used because it is more accessible
+
+console.log(Object.keys(circle)) // only return the instace members
+
+for(let key in circle) { //returns instance and prototype
+  console.log(key)
+}
