@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 
-module.export = {
+
 
 function File(filePath) {
 
@@ -31,7 +31,7 @@ function File(filePath) {
 
 }
 
-}
+
 
   const myFile = new File("/Users/cassiabernardo/Dev/js-training/objects.js")
 
