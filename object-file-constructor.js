@@ -33,16 +33,16 @@ function File(filePath) {
 
 
 
-  const myFile = new File("/Users/cassiabernardo/Dev/js-training/objects.js")
+  const myFile = new File("/Users/cassiabernardo/Dev/js-learning")
 
 
 
 
-//console.log(myFile.filePath)
+console.log(myFile.filePath)
 
 //console.log(myFile.getSize())
 
-//console.log(myFile.isFile())
+console.log(myFile.isFile())
 
 //console.log(myFile.fileType())
 
