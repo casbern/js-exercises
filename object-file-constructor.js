@@ -35,14 +35,16 @@ function File(filePath) {
 
   const myFile = new File("/Users/cassiabernardo/Dev/js-learning/objects.js")
 
+  exports.File = File // return an object 
+
+  //module.exports = File 
 
 
-
-console.log(myFile.filePath)
+//console.log(myFile.filePath)
 
 //console.log(myFile.getSize())
 
-console.log(myFile.isFile())
+//console.log(myFile.isFile())
 
 //console.log(myFile.fileType())
 
