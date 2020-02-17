@@ -14,7 +14,7 @@ const persons = [{
   sex: "feminine"
 }]
 
-  const getPerson = function (persons,name) {
+  const getPerson = function (name) {
   
   for( person of persons) {
 
@@ -26,7 +26,12 @@ const persons = [{
     return "this name is not available"     
 }
 
+
+// you have two ways to export the function as followed
+
 module.exports = getPerson
+
+//exports.getPerson = getPerson 
 
 
 //console.log(getPerson(persons,"Luana"))

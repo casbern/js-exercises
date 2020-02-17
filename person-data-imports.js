@@ -1,12 +1,8 @@
-const personData = require("./person-data.js")
-console.log(personData)
+const getPerson = require("./person-data.js")
+console.log(getPerson)
 
-const persons = [{
-  nome: "Patricia",
-  age: 20,
-  sex: "feminine"
-}]
 
-console.log(personData(persons, "Patricia"))
+
+console.log(getPerson("Luana"))
 
 
