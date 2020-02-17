@@ -33,7 +33,7 @@ function File(filePath) {
 
 
 
-  const myFile = new File("/Users/cassiabernardo/Dev/js-learning")
+  const myFile = new File("/Users/cassiabernardo/Dev/js-learning/objects.js")
 
 
 
