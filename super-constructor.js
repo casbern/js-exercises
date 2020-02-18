@@ -1,6 +1,6 @@
-// Creating you own prototypical inheritance
 
-function Shape () {
+function Shape (color) {
+  this.color = color
 }
 
 Shape.prototype.duplicate = function () {
@@ -10,7 +10,11 @@ Shape.prototype.duplicate = function () {
 Circle.prototype = Object.create(Shape.prototype)
 Circle.prototype.constructor = Circle //reset the Circle constructor
 
-function Circle (radius) {
+function Circle (radius,color) {
+
+  Shape.call(this, color) //this is how you call the super constructor. 
+  //now circle can also inherit the color property
+
   this.radius = radius
 }
 
@@ -20,4 +24,4 @@ Circle.prototype.draw = function() {
 
 
 const shape = new Shape()
-const circle = new Circle(1)
+const circle = new Circle(1, 'black')
