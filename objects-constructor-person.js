@@ -1,24 +1,29 @@
 function isValidAge(age) {
-  if (age < 0 || age > 160) {
-    return "Type a valid age."
+  if(age > 0 && age < 160) {
+    return true
+  } else {
+    throw "Invalid age"
+  } 
+}
+
+function isValidName(name) {
+  if (typeof (name) == 'string') {
+    return removeSpaces(name)
+  } else {
+    throw "Invalid name"
   }
 }
 
-function isValidName(firstName, lastName) {
-  return typeof (firstName, lastName) == 'string'
-}
-
 function removeSpaces(name) {
-  const removeSpaces = name.trim(" ")
-  return removeSpaces
+  return name.trim(" ")
 }
 
 
 function Person(firstName, lastName, age) {
-  isValidName(firstName, lastName)
   this.firstName = firstName
   this.lastName = lastName
   this.age = age
+
 }
 
 const person = new Person("Monica", "Silva", 30)
