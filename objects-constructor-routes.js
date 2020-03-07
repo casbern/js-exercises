@@ -1,21 +1,47 @@
-function Route(route) {
-  this.route = route
+function splitRequest(request) {
+  const method = request.split(" ")
+  return method
+  
+}
 
-  this.splitingRoute = function () {
-    const split1 = route.split(" ")
-    const url = split1[1]
-    const split2 = route.split("/")
+function showMethod(request) {
+  const method = splitRequest(request)
+   return method[0]
+}
 
-    this.method = split1[0]
-    this.protocol = split2[0]
-    this.hostname = split[2]
-    this.urlPath = 
-    this.parameters = 
+function showProtocol(request) {
+  const protocol = splitRequest(request)
+  const stringTransform = protocol[1].split("/", 1)
+  return stringTransform.toString()
+}
 
-  }
+function showHostName(request) {
+  const hostName = splitRequest(request)
+  const stringTransform = hostName[1].split("/")
+  return stringTransform[2].toString() 
+}
+
+function showURL(request) {
+  const url = splitRequest(request)
+  return url[1].substr(19)
+}
+
+
+
+
+console.log(showURL("POST https://example.com/teachers/create"))
+
+function Route(request) {
+  this.method = showMethod(request)
+  this.protocol = showProtocol(request)
+  this.hostName = showHostName(request)
+  this.url = showURL(request)
+  // this.paramenters = paramenters
+
+  
+  
 }
 
 const route = new Route("POST https://example.com/teachers/create")
 
-route.splitingRoute()
 
