@@ -26,27 +26,15 @@ function showURL(request) {
   return url[1].substr(19)
 }
 
-function showParameters(request) {
-  const parameters = splitRequest(request)
-  return parameters[1].substr(19)
-}
-
-
-
-
-console.log(showURL("POST https://example.com/teachers/create"))
 
 function Route(request) {
   this.method = showMethod(request)
   this.protocol = showProtocol(request)
   this.hostName = showHostName(request)
   this.url = showURL(request)
-  // this.paramenters = paramenters
 
-  
-  
 }
 
 const route = new Route("POST https://example.com/teachers/create")
-
+console.log(route)
 
