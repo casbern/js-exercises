@@ -26,6 +26,11 @@ function showURL(request) {
   return url[1].substr(19)
 }
 
+function showParameters(request) {
+  const parameters = splitRequest(request)
+  return parameters[1].substr(19)
+}
+
 
 
 
