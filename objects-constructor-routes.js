@@ -1,27 +1,25 @@
 function Route(request) {
 
-  
-  
-  function showProtocol() {
-    const stringTransform = url.split("/", 1)
-    return stringTransform.toString()
+  function getProtocol() {
+    const stringTransformation = url.split("/", 1)
+    return stringTransformation.toString()
   }
   
-  function showHostName() {
-    const stringTransform = url.split("/")
-    return stringTransform[2].toString()
+  function getHostName() {
+    const stringTransformation = url.split("/")
+    return stringTransformation[2].toString()
   }
   
-  function showURL() {
+  function getURL() {
     return url.substr(19)
   }
   
   let  [ method, url ] = request.split(" ")
 
   this.method = method
-  this.protocol = showProtocol()
-  this.hostName = showHostName()
-  this.urlPath = showURL()
+  this.protocol = getProtocol()
+  this.hostName = getHostName()
+  this.urlPath = getURL()
   
 }
 
