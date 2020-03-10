@@ -14,9 +14,27 @@ valueType = 30 // valueType2 will be 20 and valueType will continue being 10
 //* Reference types are copied by reference
 //* Reference types are --> objects, function, array
 
-//Output: 
+//Output: By changing the value of the first variable, the second will be changed as well.
 
 let referenceType = { a: 1, b: 2 }
 let referenceType2 = referenceType
 
 referenceType.a = 10
+
+//* Value types (primitives) are copied by value in parameter functions
+
+function number(a) {
+  console.log(a + 1)
+}
+
+let a = 4
+number(a)
+
+//* Referente types are copied by reference in parameter functions
+
+let value1 = { value: 2}
+function value(a) {
+  console.log(a.value = 8)
+}
+value(value)
+console.log(value)
