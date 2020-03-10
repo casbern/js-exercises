@@ -22,7 +22,7 @@ let referenceType2 = referenceType
 referenceType.a = 10
 
 //* Value types (primitives) are copied by value in parameter functions
-
+// The output of the function will be 5, but the original variable will continue being 4.
 function number(a) {
   console.log(a + 1)
 }
@@ -31,10 +31,11 @@ let a = 4
 number(a)
 
 //* Referente types are copied by reference in parameter functions
+// It won't change because the value will only exist inside the scope.
 
-let value1 = { value: 2}
 function value(a) {
   console.log(a.value = 8)
 }
+let value1 = { value: 2}
+
 value(value)
-console.log(value)
