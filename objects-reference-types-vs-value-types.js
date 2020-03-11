@@ -24,18 +24,24 @@ referenceType.a = 10
 //* Value types (primitives) are copied by value in parameter functions
 // The output of the function will be 5, but the original variable will continue being 4.
 function number(a) {
-  console.log(a + 1)
+  a = a + 1
+  //console.log(a)
 }
 
 let a = 4
 number(a)
 
 //* Referente types are copied by reference in parameter functions
-// It won't change because the value will only exist inside the scope.
+// The parameter is a reference type, so when you pass that as a parameter and change that
+// inside the function, it will also change the variable that holds it outside. 
 
 function value(a) {
-  console.log(a.value = 8)
+  a.value = 8
+  console.log(a.value)
 }
+
 let value1 = { value: 2}
 
-value(value)
+console.log(value(value1))
+
+console.log(value1) // now value1 has a property with the value 8  as it was changed inside the scope of the function.
