@@ -29,3 +29,4 @@ function foundScholarity (foundTeacher) {
 
 const sch = foundScholarity(foundTeacher)
 console.log(sch)
+
