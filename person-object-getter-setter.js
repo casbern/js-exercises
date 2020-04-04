@@ -2,8 +2,7 @@ function Person() {
   let firstName, lastName, age
 
   function removeSpaces (name) {
-  firstName = name.trim(" ")
-   return firstName
+   return name.trim(" ")
  }
 
   Object.defineProperty(this, "firstName", {
@@ -12,8 +11,8 @@ function Person() {
     },
     set: function(value) {
       if (typeof (value) == 'string') {
-        firstName = value
-        removeSpaces(firstName)
+        firstName = removeSpaces(value)
+                
       } else {
         throw new Error("Invalid name")
       }
@@ -35,7 +34,7 @@ function Person() {
 }
 
 const john_doe = new Person()
-john_doe.firstName = '  John Doe '
+john_doe.firstName = '  John  '
 //john_doe.lastName = 'Doe' 
 //john_doe.age = 23 
 //john_doe.name = 'Jonica Donica' 
