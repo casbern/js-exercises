@@ -36,7 +36,8 @@ function Person() {
 const john_doe = new Person()
 john_doe.firstName = '  John  '
 //john_doe.lastName = 'Doe' 
-//john_doe.age = 23 
+john_doe.age = 23 
 //john_doe.name = 'Jonica Donica' 
 
 console.log(john_doe.firstName)
+console.log(john_doe.age)
