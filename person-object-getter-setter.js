@@ -12,7 +12,7 @@ function Person() {
     set: function(value) {
       if (typeof (value) == 'string') {
         firstName = value
-        removeSpaces(value)
+        removeSpaces(firstName)
       } else {
         throw new Error("Invalid name")
       }
@@ -34,9 +34,9 @@ function Person() {
 }
 
 const john_doe = new Person()
-//john_doe.firstName = '  John  '
+john_doe.firstName = '  John  '
 //john_doe.lastName = 'Doe' 
-john_doe.age = 23 
+//john_doe.age = 23 
 //john_doe.name = 'Jonica Donica' 
 
-console.log(john_doe) 
+console.log(john_doe.firstName)
