@@ -2,12 +2,12 @@ function Person() {
   let firstName, lastName, age
 
   function removeSpaces (name) {
-   return name.trim(" ")
+  firstName = name.trim(" ")
+   return firstName
  }
 
   Object.defineProperty(this, "firstName", {
     get: function() {
-      firstName = value
       return firstName
     },
     set: function(value) {
@@ -35,7 +35,7 @@ function Person() {
 }
 
 const john_doe = new Person()
-john_doe.firstName = '  John  '
+john_doe.firstName = '  John Doe '
 //john_doe.lastName = 'Doe' 
 //john_doe.age = 23 
 //john_doe.name = 'Jonica Donica' 
