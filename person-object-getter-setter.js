@@ -7,6 +7,7 @@ function Person() {
 
   Object.defineProperty(this, "firstName", {
     get: function() {
+      firstName = value
       return firstName
     },
     set: function(value) {
