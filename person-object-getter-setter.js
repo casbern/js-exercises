@@ -9,7 +9,7 @@ function Person() {
     get: function() {
       return firstName
     },
-    setter: function(firstName) {
+    set: function(firstName) {
       if (typeof (firstName) == 'string') {
         return removeSpaces(firstName)
       } else {
