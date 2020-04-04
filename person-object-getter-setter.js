@@ -1,22 +1,35 @@
 function Person() {
-  firstName = isValidName(firstName)
-  lastName = isValidName(lastName)
-  age = isValidAge(age)
+  firstName = "firstName"
+  lastName = "lastName"
+  age = 0
 
   function removeSpaces (name) {
    return name.trim(" ")
  }
 
-  Object.showName(this, "firstName", {
+  Object.defineProperty(this, "firstName", {
     get: function() {
       return firstName
     },
-    setter: function(value) {
-      if (typeof (value) == 'string') {
-        return removeSpaces(value)
+    setter: function(firstName) {
+      if (typeof (firstName) == 'string') {
+        return removeSpaces(firstName)
       } else {
         throw new Error("Invalid name")
       }
+    }
+  })
+
+  Object.defineProperty(this, "age", {
+    get: function(){
+      return age
+    },
+    setter: function(age) {
+      if(age > 0 && age < 160) {
+        return age
+      } else {
+        throw "Invalid age"
+      } 
     }
   })
 }
@@ -29,24 +42,3 @@ john_doe.age = 23
 john_doe.name = 'Jonica Donica' 
 
 console.log(john_doe.name) 
-
-
-// function isValidName (name) {
-//   if (typeof (name) == 'string') {
-//     return removeSpaces(name)
-//   } else {
-//     throw "Invalid name"
-//   }
-// }
-
-// function removeSpaces (name) {
-//   return name.trim(" ")
-// }
-
-// function isValidAge (age) {
-//   if(age > 0 && age < 160) {
-//     return age
-//   } else {
-//     throw "Invalid age"
-//   } 
-// }
