@@ -24,21 +24,20 @@ function Person() {
     get: function(){
       return age
     },
-    setter: function(age) {
-      if(age > 0 && age < 160) {
-        return age
+    setter: function(value) {
+      if(!value > 0 && !value < 160) {
+        throw new Error("Invalid age")
       } else {
-        throw "Invalid age"
+        age = value
       } 
     }
   })
 }
 
-const john_doe = Person()
-john_doe.firstName = '  John  '
-john_doe.lastName = 'Doe' 
+const john_doe = new Person()
+//john_doe.firstName = '  John  '
+//john_doe.lastName = 'Doe' 
 john_doe.age = 23 
+//john_doe.name = 'Jonica Donica' 
 
-john_doe.name = 'Jonica Donica' 
-
-console.log(john_doe.name) 
+console.log(john_doe) 
