@@ -12,7 +12,7 @@ function Person() {
     set: function(value) {
       if (typeof (value) == 'string') {
         firstName = removeSpaces(value)
-                
+
       } else {
         throw new Error("Invalid name")
       }
@@ -23,7 +23,7 @@ function Person() {
     get: function(){
       return age
     },
-    setter: function(value) {
+    set: function(value) {
       if(!value > 0 && !value < 160) {
         throw new Error("Invalid age")
       } else {
