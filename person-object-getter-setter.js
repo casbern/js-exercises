@@ -12,7 +12,7 @@ function Person() {
     set: function(value) {
       if (typeof (value) == 'string') {
         firstName = value
-        return removeSpaces(value)
+        removeSpaces(value)
       } else {
         throw new Error("Invalid name")
       }
