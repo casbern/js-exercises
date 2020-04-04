@@ -1,7 +1,5 @@
 function Person() {
-  firstName = "firstName"
-  lastName = "lastName"
-  age = 0
+  let firstName, lastName, age
 
   function removeSpaces (name) {
    return name.trim(" ")
