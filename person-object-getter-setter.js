@@ -9,9 +9,10 @@ function Person() {
     get: function() {
       return firstName
     },
-    set: function(firstName) {
-      if (typeof (firstName) == 'string') {
-        return removeSpaces(firstName)
+    set: function(value) {
+      if (typeof (value) == 'string') {
+        firstName = value
+        return removeSpaces(value)
       } else {
         throw new Error("Invalid name")
       }
