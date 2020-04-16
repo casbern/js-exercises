@@ -10,8 +10,8 @@ const course2 = {
   price: 20
 }
 
-const parent1 = Object.setPrototypeOf(course1)
-const parent2 = Object.setPrototypeOf(course2)
+const parent1 = Object.getPrototypeOf(course1)
+const parent2 = Object.getPrototypeOf(course2)
 
 console.log('parent1')
 console.log(parent1)
@@ -33,7 +33,7 @@ console.log(Object.getPrototypeOf(parent1) === Object.getPrototypeOf(parent2))
 
 // PART 2
 
-function FancyCourse(course) {
+function FancyCourse() {
   this.toString = function() {
     return this.title
   }
@@ -48,3 +48,6 @@ function FancyCourse(course) {
 
 const newCourse1 = new FancyCourse()
 const newCourse2 = new FancyCourse()
+
+const newParent1 = Object.getPrototypeOf(newCourse1)
+const newParent2 = Object.getPrototypeOf(newCourse2)
