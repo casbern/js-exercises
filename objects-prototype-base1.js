@@ -10,24 +10,13 @@ const course2 = {
   price: 20
 }
 
-const parent1 = Object.getPrototypeOf(course1)
-const parent2 = Object.getPrototypeOf(course2)
+console.log(Object.getPrototypeOf(course1) === Object.getPrototypeOf(course2))
 
-console.log('parent1')
-console.log(parent1)
+//* Each JS object, by default, has as prototype (has as parent) the builtin Object object (base object)
 
-console.log('parent2')
-console.log(parent2)
 
-console.log('parent1 === parent2')
-console.log(parent1 === parent2)
 
-console.log(Object.getPrototypeOf(parent1) === Object.getPrototypeOf(parent2))
 
-//* the object parent1 and parent2 are not equal. Each has its own address
-//* in memory that is stored in a variable and when compared, those references are not the same.
-
-//* Now, when we get the prototype of each, we see we have just one prototype loaded in memory, and both 
 //* objects have it as its parent. They both use the same prototype.
 
 
@@ -46,8 +35,9 @@ function FancyCourse() {
   }
 }
 
-const newCourse1 = new FancyCourse()
-const newCourse2 = new FancyCourse()
+const fancyCourse1 = new FancyCourse()
+const fancyCourse2 = new FancyCourse()
 
-const newParent1 = Object.getPrototypeOf(newCourse1)
-const newParent2 = Object.getPrototypeOf(newCourse2)
+Object.setPrototypeOf(course1, fancyCourse1)
+Object.setPrototypeOf(course2, fancyCourse2)
+
