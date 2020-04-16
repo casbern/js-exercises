@@ -26,8 +26,17 @@ console.log(parent2)
 console.log('parent1 === parent2')
 console.log(parent1 === parent2)
 
+console.log(Object.getPrototypeOf(parent1) === Object.getPrototypeOf(parent2))
+
 //! This will prove who is parent1, who is parent2 and if they are equals.
 //! Think of the signification of parent1/parent2. Who is it?
+
+//* the object parent1 and parent2 are not equal. Each has its own address
+//* in memory that is stored in a variable and when compared, those references are not the same.
+
+//* Now, when we get the prototype of each, we see we have just one prototype loaded in memory, and both 
+//* objects have it as its parent. They both use the same prototype.
+
 
 // PART 2
 
