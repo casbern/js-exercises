@@ -46,5 +46,5 @@ function FancyCourse(course) {
   }
 }
 
-const newCourse1 = new FancyCourse(course1)
-const newCourse2 = new FancyCourse(course2)
+const newCourse1 = new FancyCourse()
+const newCourse2 = new FancyCourse()
