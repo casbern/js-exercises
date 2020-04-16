@@ -15,11 +15,6 @@ console.log(Object.getPrototypeOf(course1) === Object.getPrototypeOf(course2))
 //* Each JS object, by default, has as prototype (has as parent) the builtin Object object (base object)
 
 
-
-
-//* objects have it as its parent. They both use the same prototype.
-
-
 // PART 2
 
 function FancyCourse() {
