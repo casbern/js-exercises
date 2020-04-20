@@ -78,17 +78,45 @@ console.log(fancyCourse2.price)
 //console.log(fancyCourse1.whoAmI())
 //* It gives an error, because whoAmI() is not part of this object nor part of the prototype of this object.
 
-console.log("fancyCourse1.toString()")
+console.log("console log of fancyCourse1.toString()")
 console.log(fancyCourse1.toString()) //[object Object]
 //* It works because of prototypical inheritance. JS looks first in the current obj, then in the prototype, then in the root object.
 
 Object.setPrototypeOf(fancyCourse1, course1) //fancyCourse1 is the child and course1 will be the prototype.
 Object.setPrototypeOf(fancyCourse2, course2)
 
-
+console.log("console log of fancyCourse1.toString()")
 console.log(fancyCourse1.toString())
-console.log(fancyCourse2.whoAmI()) //! I did not understand why it did not work..
+
+console.log("console log of fancyCourse1.whoAmI()")
+console.log(fancyCourse1.whoAmI()) 
+
+console.log("console log of fancyCourse1.convertPrice()")
 console.log(fancyCourse1.convertPrice()) 
 
+console.log("console log of fancyCourse2.toString()")
+console.log(fancyCourse2.toString())
 
+console.log("console log of fancyCourse2.whoAmI()")
+console.log(fancyCourse2.whoAmI()) 
+
+console.log("console log of fancyCourse2.convertPrice()")
+console.log(fancyCourse2.convertPrice()) 
+
+//* Now the methods above all work with the object fancyCourse1 and 2, because all methods are
+//* part of the prototype of this fancyCourse object.
+
+console.log(fancyCourse1.__proto__)
+console.log(fancyCourse1.__proto__.__proto__)
+console.log(fancyCourse1.__proto__.__proto__.__proto__)
+console.log(fancyCourse1.__proto__.__proto__.__proto__.__proto__) //It goes until the depth of 3. At this stage, the result is null.
+
+//* The prototype of fancyCourse1 is now the object course1
+//* Yes, you can call the method whoAmI() on fancyCourse1, because this method is now part of the prototype for this object.
+//* fancyCourse1.__proto__.whoAmI() works because you are accessing this method from its prototype that now includes it.
+//* course1.__proto__.whoAmI() does not work, because you are trying to access in its prototype a method that does not exist there. 
+//* this method only exist in the object itself.
+
+//* The prototype of fancyCourse1 now is course1, so this prototype includes all available methods in course1.
+//* The prototype of course1 remains untouchable.
 
