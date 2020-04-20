@@ -42,42 +42,42 @@ console.log(Object.getPrototypeOf(course1) === Object.getPrototypeOf(course2))
 
 console.log("Equality of the root object")
 console.log(course1.__proto__.__proto__ === course2.__proto__.__proto__)
-//* They are equal, both objects made from the constructor Course share the same parent and grandparent.
+//* They are equal, both objects made from the constructor Course share the same parent and grandparent (root object).
 
 // =============================================================== //
 
-function fancyCourse(title, price) {
+function FancyCourse(title, price) {
   this.title = title
   this.price = price
 }
 
-const fancyCourse1 = new fancyCourse("Mosh", 20)
-const fancyCourse2 = new fancyCourse("Udemy", 10)
+const FancyCourse1 = new FancyCourse("Mosh", 20)
+const FancyCourse2 = new FancyCourse("Udemy", 10)
 
-console.log("Equality of prototypes of fancyCourse1 and 2")
-console.log(Object.getPrototypeOf(fancyCourse1) === Object.getPrototypeOf(fancyCourse2))
+console.log("Equality of prototypes of FancyCourse1 and 2")
+console.log(Object.getPrototypeOf(FancyCourse1) === Object.getPrototypeOf(FancyCourse2))
 
 //* They are equal, as we saw in the other example, they share the same prototype.
 
-console.log("console.log of fancycourse1 title")
-console.log(fancyCourse1.title)
-console.log("console.log of fancycourse2 title")
-console.log(fancyCourse2.title)
+console.log("console.log of FancyCourse1 title")
+console.log(FancyCourse1.title)
+console.log("console.log of FancyCourse2 title")
+console.log(FancyCourse2.title)
 
-console.log("console.log of fancycourse1 price")
-console.log(fancyCourse1.price)
-console.log("console.log of fancycourse2 price")
-console.log(fancyCourse2.price)
+console.log("console.log of FancyCourse1 price")
+console.log(FancyCourse1.price)
+console.log("console.log of FancyCourse2 price")
+console.log(FancyCourse2.price)
 
-//console.log(fancyCourse1.whoAmI())
+//console.log(FancyCourse1.whoAmI())
 //* It gives an error, because whoAmI() is not part of this object nor part of the prototype of this object.
 
-Object.setPrototypeOf(course1, fancyCourse1)
-Object.setPrototypeOf(course2, fancyCourse2)
+Object.setPrototypeOf(course1, FancyCourse1)
+Object.setPrototypeOf(course2, FancyCourse2)
 
-console.log(fancyCourse1.toString())
-console.log(fancyCourse2.whoAmI()) //! I did not understand why it did not work..
-console.log(fancyCourse1.convertPrice()) 
+console.log(FancyCourse1.toString())
+console.log(FancyCourse2.whoAmI()) //! I did not understand why it did not work..
+console.log(FancyCourse1.convertPrice()) 
 
 
 
