@@ -54,6 +54,12 @@ function FancyCourse(title, price) {
 const fancyCourse1 = new FancyCourse("Mosh", 20)
 const fancyCourse2 = new FancyCourse("Udemy", 10)
 
+console.log("Prototype of fancyCourse1")
+console.log(Object.getPrototypeOf(fancyCourse1))
+
+console.log("Prototype of fancyCourse2")
+console.log(Object.getPrototypeOf(fancyCourse2))
+
 console.log("Equality of prototypes of FancyCourse1 and 2")
 console.log(Object.getPrototypeOf(fancyCourse1) === Object.getPrototypeOf(fancyCourse2))
 
@@ -69,7 +75,7 @@ console.log(fancyCourse1.price)
 console.log("console.log of FancyCourse2 price")
 console.log(fancyCourse2.price)
 
-//console.log(FancyCourse1.whoAmI())
+//console.log(fancyCourse1.whoAmI())
 //* It gives an error, because whoAmI() is not part of this object nor part of the prototype of this object.
 
 Object.setPrototypeOf(course1, fancyCourse1)
