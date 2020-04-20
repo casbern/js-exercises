@@ -79,10 +79,12 @@ console.log(fancyCourse2.price)
 //* It gives an error, because whoAmI() is not part of this object nor part of the prototype of this object.
 
 console.log("fancyCourse1.toString()")
-console.log(fancyCourse1.toString())
+console.log(fancyCourse1.toString()) //[object Object]
+//* It works because of prototypical inheritance. JS looks first in the current obj, then in the prototype, then in the root object.
 
-Object.setPrototypeOf(course1, fancyCourse1)
-Object.setPrototypeOf(course2, fancyCourse2)
+Object.setPrototypeOf(fancyCourse1, course1) //fancyCourse1 is the child and course1 will be the prototype.
+Object.setPrototypeOf(fancyCourse2, course2)
+
 
 console.log(fancyCourse1.toString())
 console.log(fancyCourse2.whoAmI()) //! I did not understand why it did not work..
