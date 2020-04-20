@@ -78,6 +78,9 @@ console.log(fancyCourse2.price)
 //console.log(fancyCourse1.whoAmI())
 //* It gives an error, because whoAmI() is not part of this object nor part of the prototype of this object.
 
+console.log("fancyCourse1.toString()")
+console.log(fancyCourse1.toString())
+
 Object.setPrototypeOf(course1, fancyCourse1)
 Object.setPrototypeOf(course2, fancyCourse2)
 
