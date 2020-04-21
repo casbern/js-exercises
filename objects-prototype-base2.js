@@ -118,5 +118,6 @@ console.log(fancyCourse1.__proto__.__proto__.__proto__.__proto__) //It goes unti
 //* this method only exist in the object itself.
 
 //* The prototype of fancyCourse1 now is course1, so this prototype includes all available methods in course1.
-//* The prototype of course1 remains untouchable.
+//* The prototype of course1 remains unchanged. 
+//* coursease object is the prototype and it does not have the same methods like the actual curse1 object.
 
