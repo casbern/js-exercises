@@ -12,6 +12,9 @@ console.log(circle.radius)
 const person = new Person(1.40)
 console.log(person.height)
 
+console.log('Circle.prototype == circle.__proto__')
+console.log(Circle.prototype == circle.__proto__)
+
 // ===== TAKEAWAYS =====
 // Prototype or the parent of myObject.
 // Object.getPrototypeOf(circle) is the same as Circle.__proto__
