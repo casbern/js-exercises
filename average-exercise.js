@@ -16,7 +16,7 @@ function olderPerson(persons) {
   console.log(`The oldest is ${age} years old`)
   return age
 }
-//olderPerson(persons)
+olderPerson(persons)
 
 function youngPerson(persons) {
   let age = olderPerson(persons)
@@ -25,10 +25,10 @@ function youngPerson(persons) {
       age = person.age
     }
   }
-  console.log(`The oldest is ${age} years old`)
+  console.log(`The youngest is ${age} years old`)
   return age
 }
-//youngPerson(persons)
+youngPerson(persons)
 
 function averageAge(persons) {
   let add = 0
@@ -39,7 +39,7 @@ function averageAge(persons) {
   console.log(`The average of ages is ${average}`)
   return average
 }
-//averageAge(persons)
+averageAge(persons)
 
 function countM(persons) {
   let add = 0
@@ -50,7 +50,7 @@ function countM(persons) {
   console.log(`Number of men are ${add}`)
   return add
 }
-//countM(persons)
+countM(persons)
 
 function countF(persons) {
   let add = 0
@@ -61,4 +61,4 @@ function countF(persons) {
   console.log(`Number of women are ${add}`)
   return add
 }
-//countF(persons)
+countF(persons)
