@@ -30,3 +30,4 @@ console.log(proto1 === proto2) //true
 //is the property prototype that is within the constructor. This property
 //will be the parent of all objects that are born using that constructor.
 //The object base this time will be the grandparent of this object.
+//Objects created by a given constructor will have the same prototype.
