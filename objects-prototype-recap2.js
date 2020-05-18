@@ -28,5 +28,6 @@ const obj = {
 
 console.log(obj.age.toString())
 console.log(obj.name.valueOf())
-console.log(obj.toLocaleString())
+console.log(obj.propertyIsEnumerable("name")) //returns a boolean 
+//indicating if the specified property is enumerable and is the object´s own property. 
 
