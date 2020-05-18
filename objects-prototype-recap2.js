@@ -21,4 +21,12 @@ console.log(arr.reduce( (acc, cur) => {
 console.log(arr.sort())
 
 
+const obj = {
+  name: "node",
+  age: 5
+}
+
+console.log(obj.age.toString())
+console.log(obj.name.valueOf())
+console.log(obj.toLocaleString())
 
