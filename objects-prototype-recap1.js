@@ -27,7 +27,7 @@ console.log(proto1 === proto2) //true
 //objects that were made from the constructor.
 
 //Now important to remember the parent of the fancyCourse1 and fancyCourse2 will be
-//is the property prototype that is within the constructor. This property
+//the property prototype that is in the constructor. This property
 //will be the parent of all objects that are born using that constructor.
 //The object base this time will be the grandparent of this object.
 //Objects created by a given constructor will have the same prototype.
