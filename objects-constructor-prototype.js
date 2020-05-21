@@ -36,3 +36,4 @@ const courseObjProto = Course.prototype
 //objects created by this constructor.
 
 //The parent for the object created and the prototype for the constructor are equal.
+
