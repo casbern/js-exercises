@@ -15,6 +15,11 @@ Course.prototype.toString = function() {
  
 const course = new Course(10, "Node", "Learn fast")
 
+const descriptor = Object.getOwnPropertyDescriptor(course, "price")
+const descriptor1 = Object.getOwnPropertyDescriptor(Course.prototype, "toString")
+console.log(descriptor1)
+
+
 
 //* When we access a property or a method on an object. JS engine first look at 
 //* the object itself, if it can't find that property or method, it'll look at the prototype 
