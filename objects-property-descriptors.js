@@ -1,5 +1,5 @@
 //Properties have attributes attached to them and these attributes prevent
-//a property of being enumerated, for example.
+//a property of being enumerated (shown in a iteration), for example.
 
 const course = {
   id: 1,
