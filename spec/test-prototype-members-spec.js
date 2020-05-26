@@ -1,4 +1,4 @@
-const protoMembers = require('../../objects-prototype-iterating-own-and-prototype-members')
+const protoMembers = require('../objects-prototype-iterating-own-and-prototype-members')
 
 describe("Prototype members", function() {
   it("own members are correct", function() {

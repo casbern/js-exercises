@@ -20,14 +20,15 @@ const course = new Course(10, "Node", "Learn fast")
 
 //Returns instance members. The properties of an object made from a constructor.
 const ownMembers = Object.keys(course)
-console.log(ownMembers)
+module.exports.ownMembers = ownMembers
+//console.log(ownMembers)
 
 //Returns all members (instace + protytpe)
 const allMembers = []
-
+module.exports.allMembers = allMembers
 for (let key in course) {
   allMembers.push(key)
 }
-console.log(allMembers)
+//console.log(allMembers)
 
 

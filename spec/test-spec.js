@@ -1,4 +1,4 @@
-const sum = require('../../sum')
+const sum = require('../sum')
 
 describe("The sum function", function() {
   it("adds two numbers correctly", function () {
