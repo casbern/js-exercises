@@ -55,4 +55,4 @@ module.exports = {
   tshirt: new Tshirt('S')
 }
 
-console.log(module)
+console.log(module.exports.course)
