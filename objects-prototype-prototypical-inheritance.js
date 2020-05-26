@@ -11,7 +11,7 @@ function Course(price, title, description) {
 Course.prototype = Object.create(Product.prototype)
 Course.prototype.constructor = Course //reset the course prototype.
 
-Course.prototype.pricePhrase = function() {
+Course.prototype.toString = function() {
   return `Course "JS object" with price ${this.price} USD (${this.priceToReais()} reais)`
 }
  
@@ -31,6 +31,9 @@ Product.prototype.priceToReais = function() {
   return (this.price * reaisPrice).toFixed(2)
 }
 
+Product.prototype.toString = function() {
+  return `Course "JS object" with price ${this.price} USD (${this.priceToReais()} reais)`
+}
 
 
 // new Course.prototype.constructor() is equal to new Course()
@@ -45,14 +48,11 @@ function Tshirt(size) {
 Tshirt.prototype = Object.create(Product.prototype)
 Tshirt.prototype.constructor = Tshirt
 
-//const course = new Course(10, "Node", "Learn fast")
-//const product = new Product(10, "Node", "Learn fast")
-//const tshirt = new Tshirt('S')
+const course = new Course(10, "Node", "Learn fast")
+const product = new Product(10, "Node", "Learn fast")
+const tshirt = new Tshirt('S')
 
-module.exports = {
-  course: new Course(10, "Node", "Learn fast"),
-  product: new Product(10, "Node", "Learn fast"),
-  tshirt: new Tshirt('S')
-}
+module.exports = {course, product, tshirt}
 
-console.log(module.exports.course)
+
+console.log(module.exports.product.prototype)

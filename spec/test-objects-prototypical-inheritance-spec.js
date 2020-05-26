@@ -1,6 +1,10 @@
 const objects = require('../objects-prototype-prototypical-inheritance')
 
-describe('Check if the price property', function() {
+describe('Check prototypes', function() {
   it('checks if the price is converted correctly', function() {
-    expect(objects.Course.price()).toBe(10)
-})})
+    expect(objects.course.price).toBe(10)
+})
+  it('checks if they have the same type', function() {
+    expect().toBe()
+  })
+})
