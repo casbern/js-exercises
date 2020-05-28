@@ -24,7 +24,7 @@ function Tshirt(size, price, title) {
 }
 
 Tshirt.prototype = Object.create(Product.prototype)
-Tshirt.prototype.constructor = Tshirt
+//Tshirt.prototype.constructor = Tshirt
 
 // ====
 
