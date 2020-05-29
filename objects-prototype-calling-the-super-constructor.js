@@ -28,7 +28,7 @@ Product.prototype.priceToReais = function() {
 }
 
 Product.prototype.toString = function() {
-  return `Course ${this.title} with price ${this.price} USD (${this.priceToReais()} reais)`
+  return `${this.constructor.name} ${this.title} with price ${this.price} USD (${this.priceToReais()} reais)`
 }
 
 // ====
@@ -56,8 +56,13 @@ of the Product constructor?
 We need to use inside the constructor we want to add these properties:
 Product.call(this, color).
 
+The call() is a method on any JS function, since JS functions are objects.
 The call() allows for a function/method belonging to one object to be assigned
 and called for a different object.
+When you use call() on a function, you pass an object as a first argument to call() 
+and that object will become the current object, attached to this, inside the called function.
+This is only relevant if the function called is used as a method, because then it will refer 
+to a current object via this.
 
 The 'new' keyword does 3 things:
 1. The 'new' operator creates a new empty object.
