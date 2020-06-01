@@ -1,7 +1,7 @@
 function extend(Child, Parent) { 
   //the parameters have uppercase because we expect constructors.
-  Child.prototype = Object.create(Parent.prototype)
-  Child.prototype.constructor = Child
+    Child.prototype = Object.create(Parent.prototype)
+    Child.prototype.constructor = Child
 }
 
 // ====
@@ -13,10 +13,12 @@ function Product(price, title, description) {
   this.makeTitle = function() {
     return `This ${this.title} course price is ${this.price}.`
   }
-  this.sell = function() {
-    return `The product with the title ${this.title} has been sold at price ${this.price}`
-  }
 }
+
+Product.prototype.sell = function() {
+    return `The product with the title ${this.title} has been sold at price ${this.price}`
+}
+
 
 Product.prototype.priceToReais = function() {
   const reaisRate = 5.69
@@ -39,9 +41,14 @@ function Course(price, title, description) {
 
 extend(Course, Product) //we are resetting the prototype.
 
+
 Course.prototype.sell = function() {
-  return `The author for the course ${this.title} needs to be paid his author fee.`
+    return [
+        Product.prototype.sell.call(this),
+        `The author for the course ${this.title} needs to be paid his author fee.`
+    ]
 }
+
 
 // ==== 
 
@@ -55,9 +62,9 @@ extend(Tshirt, Product)
 
 // ====
 
-const course = new Course(10, "Node", "Learn fast")
-const product = new Product(10, "Node", "Learn fast")
-const tshirt = new Tshirt('S', 10, "JS", "Good course")
+const course = new Course(10, "Node course", "Make this course and learn node")
+const product = new Product(20, "Book", "Read this book and learn")
+const tshirt = new Tshirt('S', 30, "JS t-shirt", "Awesome t-shirt")
 
 module.exports = {course, product, tshirt}
 
