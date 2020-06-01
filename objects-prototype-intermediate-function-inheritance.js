@@ -2,20 +2,8 @@ function extend(Child, Parent) { //the parameters have uppercase because we expe
   Child.prototype = Object.create(Parent.prototype)
   Child.prototype.constructor = Child
 }
-
-// ====
-
-function Course(price, title, description) {
-  Product.call(this, price, title, description)
-  this.makeTitle = function() {
-    return `This ${this.title} course price is ${this.price}.`
-  }
-}
-
-extend(Course, Product)
  
 // ==== 
-
 function Product(price, title, description) {
   this.price = price
   this.title = title
@@ -37,6 +25,17 @@ Product.prototype.toString = function() {
 
 // ====
 
+function Course(price, title, description) {
+  Product.call(this, price, title, description)
+  this.makeTitle = function() {
+    return `This ${this.title} course price is ${this.price}.`
+  }
+}
+
+extend(Course, Product)
+
+// ====
+
 function Tshirt(size, price, title, description) {
   this.size = size
   Product.call(this, price, title, description)
@@ -47,10 +46,6 @@ extend(Tshirt, Product)
 
 // ====
 
-const course = new Course(10, "Node", "Learn fast")
-const product = new Product(10, "Node", "Learn fast")
-const tshirt = new Tshirt('S', 10, "JS", "Good course")
+module.exports = {Product, Course, Tshirt}
 
-console.log(tshirt)
-
-module.exports = {course, product, tshirt}
+console.log(module.exports)
