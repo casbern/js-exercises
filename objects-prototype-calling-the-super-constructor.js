@@ -1,7 +1,5 @@
 function Course(price, title, description) {
-  this.price = price
-  this.title = title
-  this.description = description
+  Product.call(this, price, title, description)
   this.makeTitle = function() {
     return `This ${this.title} course price is ${this.price}.`
   }
@@ -54,7 +52,7 @@ module.exports = {course, product, tshirt}
 /* How to make tshirt object inherit price, title and descriptions properties
 of the Product constructor?
 We need to use inside the constructor we want to add these properties:
-Product.call(this, color).
+Product.call(this, price, title, description).
 
 The call() is a method on any JS function, since JS functions are objects.
 The call() allows for a function/method belonging to one object to be assigned
