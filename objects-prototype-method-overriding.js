@@ -75,3 +75,4 @@ When we access a property or a method on an object, JS engine walks up the
 prototype chain and picks the first implementation.
 Even tough we have implemented the sell method both on the parent and child object,
 the child object will be used.*/
+
