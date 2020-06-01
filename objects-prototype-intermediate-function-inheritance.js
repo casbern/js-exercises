@@ -1,6 +1,6 @@
 function extend(Child, Parent) { //the parameters have uppercase because we expect constructors.
   Child.prototype = Object.create(Parent.prototype)
-  Child.prototype.constructor = Course //reset the course prototype.
+  Child.prototype.constructor = Child
 }
 
 // ====
