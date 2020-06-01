@@ -70,9 +70,10 @@ module.exports = {course, product, tshirt}
 
 /* When the implementation in the parent may not be the ideal for the child
 you can change its implementation in the child.
-We need to redifine the method where we want it to be different. 
+We need to redefine the method for the objects where it should be different.
 When we access a property or a method on an object, JS engine walks up the
 prototype chain and picks the first implementation.
-Even tough we have implemented the sell method both on the parent and child object,
-the child object will be used.*/
-
+Even tough we have implemented the sell method both on the parent and child prototypes,
+the child prototype will be used.
+But we can call the parent prototype from within the child prototype using Parent.prototype.sell.call(this...)
+*/
