@@ -9,22 +9,23 @@ test('checks if sell() has the correct outputs for each object', () => {
     new Product(50, "React", "Learn fast")
   ]
   
+  results = []
   for (let object of objects) {
-    object.sell()
-
-    expect(object.sell()).toEqual([
-      [
-        "The product with the title Node has been sold at price 10",
-        "The author for the course Node needs to be paid his author fee."
-      ],
-      
-        "The product with the title JS has been sold at price 10",
-      
-        "The product with the title Python has been sold at price 25",
-      
-        "The product with the title React has been sold at price 50"
-    ])
-    }
-  })
+    results.push(object.sell())
+  }
   
+  expect(results).toEqual([
+    [
+      "The product with the title Node has been sold at price 10",
+      "The author for the course Node needs to be paid his author fee."
+    ],
+    
+      "The product with the title JS has been sold at price 10",
+    
+      "The product with the title Python has been sold at price 25",
+    
+      "The product with the title React has been sold at price 50"
+  ])
+})
+
 
