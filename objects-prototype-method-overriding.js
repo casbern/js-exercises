@@ -62,11 +62,7 @@ extend(Tshirt, Product)
 
 // ====
 
-const course = new Course(10, "Node course", "Make this course and learn node")
-const product = new Product(20, "Book", "Read this book and learn")
-const tshirt = new Tshirt('S', 30, "JS t-shirt", "Awesome t-shirt")
-
-module.exports = {course, product, tshirt}
+module.exports = {Product, Course, Tshirt}
 
 /* When the implementation in the parent may not be the ideal for the child
 you can change its implementation in the child.
