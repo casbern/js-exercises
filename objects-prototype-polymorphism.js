@@ -64,16 +64,6 @@ extend(Tshirt, Product)
 
 module.exports = {Product, Course, Tshirt}
 
-const objects = [
-  new Course(10, "Node", "Learn fast"),
-  new Tshirt('S', 10, "JS", "Good course"),
-  new Tshirt('M', 25, "Python", "The best course in the field"),
-  new Product(10, "Node", "Learn fast")
-]
-
-for (let object of objects) {
-  console.log(object.sell())
-}
 
 /* 
 Method overriding means reimplementing a method in a child object.
