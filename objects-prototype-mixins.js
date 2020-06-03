@@ -12,18 +12,21 @@ function Product(price, title, description) {
   }
 }
 
-Product.prototype.sell = function() {
+const isProduct = {
+  sell() {
     return `The product with the title ${this.title} has been sold at price ${this.price}`
+  },
+  toString() {
+    return `${this.constructor.name} ${this.title} with price ${this.price} USD (${this.priceToReais()} reais)`
+  }
 }
 
-Product.prototype.priceToReais = function() {
-  const reaisRate = 5.69
-  const finalReaisPrice = this.price * reaisRate
-  return Math.round(finalReaisPrice * 100) / 100
-}
-
-Product.prototype.toString = function() {
-  return `${this.constructor.name} ${this.title} with price ${this.price} USD (${this.priceToReais()} reais)`
+const priceToReais = {
+  priceToReais() {
+    const reaisRate = 5.69
+    const finalReaisPrice = this.price * reaisRate
+    return Math.round(finalReaisPrice * 100) / 100
+  }
 }
 
 // ====
@@ -37,12 +40,19 @@ function Course(price, title, description) {
   }
 }
 
-
 // ==== 
 
-function Tshirt(size) {
+function Tshirt(size, price, title, description) {
   this.size = size
+  this.price = price
+  this.title = title
+  this.description = description
 }
+
+mixin(Course.prototype, isProduct, priceToReais)
+mixin(Tshirt.prototype, isProduct, priceToReais)
+//Object.assign(Course.prototype, isProduct)
+//Object.assign(Tshirt.prototype, isProduct)
 
 // ====
 
