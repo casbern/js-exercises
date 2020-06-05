@@ -1,8 +1,10 @@
+//Function Declaration
 example()
 function example() {
   console.log('example 1')
 }
 
+//Function Expression
 example2()
 const example2 = function() {
   console.log('example 2')
