@@ -20,10 +20,10 @@ Function Declaration Syntax
 
 Function Expression Syntax
 For convention, in function expressions, we should use
-semi-collon at the end of the expression.
+semicolon at the end of the expression.
 => const sayGoodbye = function() {};
 
-Function declarations are histed which means they are raised
+Function declarations are hoisted which means they are raised
 to the top of the code. You can declare the function and 
 called it before its declaration.
 

@@ -15,3 +15,5 @@ const Example1 = class {
     this.example = "example"
   }
 }
+
+//Neither class declarations not class expressions are hoisted in js.
