@@ -1,7 +1,7 @@
 
-(function () {
+(async function () {
  console.log("hello browser")
-  messageInTheFuture("My message after button clicked after more 2000 miliseconds", 2000)
+  await messageInTheFuture("My message after button clicked after more 2000 miliseconds", 2000)
 })()
 
 document.querySelector("button").addEventListener("click", () => {
