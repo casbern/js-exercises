@@ -1,26 +1,30 @@
 
 (async function () {
- console.log("hello browser")
-  await messageInTheFuture("My message after button clicked after more 2000 miliseconds", 2000)
+
+    document.querySelector("button").addEventListener("click", () => {
+        console.log("message 1")
+        buttonClicked()
+    })
+
+
+    console.log("hello browser 1")
+    console.log("hello browser 2")
+
+    await messageInTheFuture("My message after button clicked after more 2000 miliseconds", 2000)
+
+
+
 })()
 
-document.querySelector("button").addEventListener("click", () => {
-  console.log("message 1")
-  buttonClicked()
-})
 
 async function messageInTheFuture(message, miliseconds) {
-  return new Promise( (resolve, reject) => {
-    setTimeout( () => {
-      resolve(message)
-      reject(new Error ('message'))
-    }, miliseconds)
-  })
+    await setTimeout( () => console.log(message), miliseconds )
 }
 
+
 async function buttonClicked() {
-  console.log("Hello, this btn was clicked") 
-  await messageInTheFuture("My message after button clicked after more 1000 miliseconds", 1000)
+    console.log("Hello, this btn was clicked")
+    await messageInTheFuture("My message after button clicked after more 1000 miliseconds", 1000)
 }
 
 
