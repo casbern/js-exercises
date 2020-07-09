@@ -1,9 +1,16 @@
 'use strict' 
 /* Strict mode changes the behavior of the "this" keyword.
-When strict is used, it shows undefined. Otherwise the wiondow or global object will
-be shown.
-But for classes it will not work, so in fact you do not need the 'use strict' specified,
-because by defult the body of classes are executed in the strict mode already.*/
+When we call a method on an object, like person.hi() then we say the method is connected
+to an object, in this case the person object. This means that inside the method 'this' keyword
+refers to the current object, in our case person object.
+In case we assign the method to a variable and call that variable on its own, like - const hi = person.hi
+then when we call 'hi' that is a function call and it should not be attached to an object.
+Use strict makes sure JS has the correct behavior and does not attached 'this' to an object in this 
+case (function call) and 'this' becomes undefined.
+If we do not use strict 'this' will be attached to the global object in node or window object in browser.
+
+When using classes the 'use strict' is used, implied, because by defult the body of classes are 
+executed in the strict mode already.*/
 
 /* CONSTRUCTOR */
 function Person() {
@@ -14,14 +21,14 @@ function Person() {
 
 const person = new Person()
 person.hi() //* It is called "Method Call". When we are calling a method on an object.
-/* When calling person.hi(), the result is the object Person */
+/* When calling person.hi(), 'this' is always the current object, in our case person */
 
 const hi = person.hi
 console.log(hi) //It console.log the 'hi function'.
 hi() //* It is called "Function Call". It is a reference to this method.
 /* "this" is now the window object in browser and global object in node.
 We are calling this as a stand alone function that is not part of 
-an object and when we call this in a stand alone function by default,
+an object and when we call it in a stand alone function by default,
 'this' will point to the global object which is window and global in node.*/
 
 /* CLASS */
