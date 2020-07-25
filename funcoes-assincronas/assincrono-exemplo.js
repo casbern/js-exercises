@@ -13,7 +13,8 @@
 // doubleNumber(5.40) //10.80
 // doubleNumber(6.20) //12.40
 
- 
+//* Parte 2 do exercicio 
+
 function doubleNumber(num, num2) {
   let x = Math.floor(Math.random() * 100 + 1 )
   setTimeout( function() {
