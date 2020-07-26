@@ -1,23 +1,21 @@
-//* Quando a promise retornar, faz isso... .then()  
-
-function doubleNumber(num) {
+function doubleNumber(num, num2) {
   let x = Math.floor(Math.random() * 100 + 1 )
 
   return new Promise( function(resolve, reject) {
     setTimeout( function() {
-      resolve(`Esse é o número multiplicado ${ num * 2 }`)
+      resolve( num * 2 + num2 )
     },x)
   })
 }
 
-doubleNumber(10)
+doubleNumber(5,0)
   .then( function(result) {
     console.log('result', result)
 
-    doubleNumber(20).then( function(result) {
+    doubleNumber(12,result).then( function(result) {
       console.log('result1', result)
 
-      doubleNumber(30).then( function(result) {
+      doubleNumber(2,result).then( function(result) {
         console.log('result2', result)
       })
     })

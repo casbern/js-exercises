@@ -17,20 +17,24 @@
 
 function doubleNumber(num, num2) {
   let x = Math.floor(Math.random() * 100 + 1 )
+  let result
+  
   setTimeout( function() {
-    const result = (num * 2) + num2
-
-    return result
+    result = (num * 2) + num2
+    console.log('hi', result)
   },x)
+  
+  console.log('2', result)
+  return result
 }
 
 let result
 result = doubleNumber(5, 0)
-console.log(result)
+console.log('iiii',doubleNumber(5,0))
 
-result = doubleNumber(12, result)
-console.log(result)
+// result = doubleNumber(12, result)
+// console.log(result)
 
-result = doubleNumber(2, result)
-console.log(result)
+// result = doubleNumber(2, result)
+// console.log(result)
 
