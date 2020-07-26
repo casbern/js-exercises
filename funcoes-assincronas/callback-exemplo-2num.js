@@ -3,24 +3,22 @@ function doubleNumber(num, num2, callback) {
   let result
   
   setTimeout( function() {
-    callback(num, num2)
+    const result = (num * 2) + num2
+    callback(result)
   },x)
   
   return result
 }
 
 let result
-result = doubleNumber(5, 0, function(num, num2) {
-  let r = (num * 2) + num2
-  console.log(r)
+result = doubleNumber(5, 0, function(result) {
+  console.log(result)
 
-  doubleNumber(12, r, function(num, num2) {
-    let r = (num * 2) + num2
-    console.log(r)
+  doubleNumber(12, result, function(result) {
+    console.log(result)
     
-    doubleNumber(2, r, function(num, num2) {
-      let r = (num * 2) + num2
-      console.log(r)
+    doubleNumber(2, result, function(result) {
+      console.log(result)
     })
   })
 })

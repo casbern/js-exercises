@@ -2,29 +2,30 @@
 function doubleNumber(num, callback) {
   let x = Math.floor(Math.random() * 100 + 1 )
   setTimeout( function() {
-    callback(num) 
+    const doubled = num * 2
+    callback(doubled) 
   },x)
 }
 
 doubleNumber(10.20, function(num) {
   console.log('I am the first')
-  console.log(`Esse é o número multiplicado ${ num * 2 }`)
+  console.log(num)
 
   doubleNumber(10, function(num) {
     console.log('I am the second')
-    console.log(`Esse é o número multiplicado ${ num * 2 }`)
+    console.log(num)
     
     doubleNumber(5, function(num) {
       console.log('I am the third')
-      console.log(`Esse é o número multiplicado ${ num * 2 }`)
+      console.log(num)
 
       doubleNumber(5.40, function(num) {
         console.log('I am the fourth')
-        console.log(`Esse é o número multiplicado ${ num * 2 }`)
+        console.log(num)
 
         doubleNumber(6.20, function(num) {
           console.log('I am the fifth')
-          console.log(`Esse é o número multiplicado ${ num * 2 }`)
+          console.log(num)
 
         }) 
       }) 
