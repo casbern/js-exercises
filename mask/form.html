@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mask Exercise</title>
+  <style>
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item > div {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .item input {
+      padding: 4px 8px;
+      border-radius: 2px;
+      border: 1px solid #dddd;
+    }
+
+  </style>
+</head>
+<body>
+  <form action="#">
+    <div class="item">
+      <div>Price</div>
+      <div>
+        <input 
+          type="text"  
+          name="price" 
+          placeholder="product's price"
+          onkeydown="Mask.apply(this,'formatBRL')">
+      </div>
+    </div>
+    <div class="item">
+      <div>Percentage</div>
+      <div>
+        <input 
+          type="text"
+          name="percentage"
+          placeholder="percentage number"
+          onkeydown="Mask.apply(this,'formatPercentage')">
+      </div>
+    </div>
+    <div class="item">
+      <div>CPF</div>
+      <div>
+        <input 
+          type="text"
+          name='cpf'
+          placeholder="CPF number"
+          onkeydown="Mask.apply(this, 'formatCPF')">
+      </div>
+    </div>
+
+  </form>
+  <script src="./percent-number.js"></script>
+</body>
+</html>
