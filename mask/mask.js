@@ -17,9 +17,11 @@ const Mask = {
   formatPercentage(value) {
     let divide = 10000
     const arr = value.split(',')
+    console.log('arr', arr)
+
     if (arr[1]) {
       const decimals = arr[1].split('%')[0].length
-      console.log(value, decimals)
+      console.log('hi', value, decimals)
       if (decimals > 2)
         divide = Math.pow(10, decimals + 2)
     }
