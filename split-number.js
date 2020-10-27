@@ -7,7 +7,7 @@ module.exports = function myFunction(num) {
   num = num.toString();
 
   for (let i of num) {
-    i = parseInt(i)
+    //i = parseInt(i)
     result.push(i)
   }
 
