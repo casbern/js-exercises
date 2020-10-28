@@ -12,3 +12,9 @@ test('check if the number is divisible', () => {
 test('check if the number is divisible', () => {
   expect(myFunction(-5,7)).toEqual(0)
 })
+test('check if the number is divisible', () => {
+  expect(myFunction(-5,2)).toEqual(0)
+})
+test('check if the number is divisible', () => {
+  expect(myFunction(-4,2)).toEqual(-4)
+})

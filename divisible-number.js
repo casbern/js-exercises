@@ -4,7 +4,11 @@
 // If not, return the next higher natural number that is divisible by y
 
 module.exports = function myFunction(x,y) {
-    for(let i = x; i > 0; i++) {
+    for(let i = x; ; i++) {
+      if(i < 0 && i > x) {
+        continue
+      }
+      
       if(i % y === 0) {
         return i
       } 
