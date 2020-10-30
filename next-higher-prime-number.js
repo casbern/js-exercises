@@ -6,17 +6,19 @@
 
 module.exports = function myFunction(num) {
 
-  let primeNumbers = []
+  //let primeNumbers = []
 
-  for(var i = 2; i < num; i++) {
+  for(let i = 2; i < num; i++) {
     if(num % i === 0) {
       num += 1
       i = 1
-    } else {
-      primeNumbers.push(num)
-    }
+    } 
+    // else {
+    //   primeNumbers.push(num)
+    // }
   }
 
-  return Math.max(...primeNumbers)
+  return num
+  //Math.max(...primeNumbers)
 }
 
