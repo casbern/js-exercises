@@ -19,22 +19,22 @@ function getSecondLargest(nums) {
 // return oldMaxNumber 
 
 // SECOND WAY OF SOLVING THIS PROBLEM
-let first = 0;
-let second = 0;
+let largest = 0;
+let secondLargest = 0;
 
 for (let i = 0; i < nums.length; i++) {
 
-    if (nums[i] > first) {
-        second = first
-        first = nums[i]
+    if (nums[i] > largest) {
+        secondLargest = largest
+        largest = nums[i]
     }
 
-    if (nums[i] > second && nums[i] < first) {
-        second = nums[i]
+    if (nums[i] > secondLargest && nums[i] < largest) {
+        secondLargest = nums[i]
     }
 }
 
-return second;
+return secondLargest;
   
 }
 
