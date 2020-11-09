@@ -1,0 +1,23 @@
+class Polygon {
+  constructor (array) {
+      this.array = array
+  }
+  
+  perimeter() {
+      let length = 0
+      
+      for(let number of this.array) {
+          length += number
+      }
+      
+      return length
+  }
+}
+
+const rectangle = new Polygon([10, 20, 10, 20]);
+const square = new Polygon([10, 10, 10, 10]);
+const pentagon = new Polygon([10, 20, 30, 40, 43]);
+
+console.log(rectangle.perimeter());
+console.log(square.perimeter());
+console.log(pentagon.perimeter());
