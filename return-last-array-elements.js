@@ -15,5 +15,6 @@
 //SECOND RESOLUTION
 module.exports = function myFunction(arr, n) {
   return arr.length >= n ? arr = arr.slice(arr.length-n) : arr
+  //return arr.slice(-n);
   }
   
