@@ -3,7 +3,7 @@
 // It should return false otherwise
 //
 
-module.exports = function myFunction(date1, date2) {
+function myFunction(date1, date2) {
 
   let diff = (date1.getTime() - date2.getTime()) / 1000
 
@@ -16,4 +16,4 @@ module.exports = function myFunction(date1, date2) {
   }
   }
 
-//console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')))
+console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')))
