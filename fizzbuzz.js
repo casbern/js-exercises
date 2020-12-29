@@ -1,21 +1,18 @@
 //========== FizzBuzz ===========
 
-if( typeof input !== "number") 
-function fizzBuzz(input) {
-return NaN; //typeof NaN is number.
+function fizzBuzz(n) {
 
+  for ( let i = 1; i <= n; i++ ) {
 
-// if (input % 3 === 0 && input % 5 === 0) 
-// return "FizzBuzz";
-
-// if (input % 5 === 0 ) 
-// return "Buzz";
-
-// if (input % 3 === 0 ) 
-// return "Fizz";
-
-// return input;    
+      if ( i % 3 == 0 && i % 5 == 0 ) {
+      console.log("FizzBuzz") 
+      } else if ( i % 5 == 0 ) {
+          console.log("Buzz")
+      } else if ( i % 3 == 0 ) {
+          console.log("Fizz")
+      } else {
+          console.log(i) 
+      }
+  
+  }
 }
-
-let result = fizzBuzz(false);
-console.log(result);
