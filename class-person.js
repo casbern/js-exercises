@@ -2,7 +2,7 @@ class Person {
   constructor(initialAge) {
     //let age = 0
 
-    if(initialAge > 0) {
+    if(initialAge >= 0) {
       this.age = initialAge
     } else {
       this.age = 0
@@ -11,21 +11,23 @@ class Person {
   }
 
   amIOld() {
-    if(this.age < 13) {
+    if (this.age < 13) {
       return "You are young."
-    } else if (this.age > 13 && this.age < 18) {
-      return "You are a teenager."
+    } else if (this.age >= 13 && this.age < 18) {
+      return "You are teenager."
     } else {
       return "You are old."
     }
   }
 
   yearPasses() {
-    return this.age++
+    this.age++
   }
 }
 
-const person = new Person(0)
+const person = new Person(20)
 
 console.log("amIOld", person.amIOld())
-console.log("yearPasses", person.yearPasses())
+
+person.yearPasses()
+console.log("yearPasses", person.age)
