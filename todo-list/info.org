@@ -1,0 +1,39 @@
+* project
+
+The purpose of this project is to learn how to start a project from scratch in your own way, play with it, be creative, and control the code, own the code, master the code so it does what you want and it makes sense to you.
+
+To do this better, we'll make a project, the same project, but in three different ways. This will give you some perspective on how to organize the code, how to move code around and refactor code.
+
+The project is: managing a todo list. What we want to achieve with this project is not having a real-world project but a minimal one for learning, to start with.
+
+So that means we will not have users, only todo list items. Let's call them tasks.
+
+So in a high level, you want to:
+- be able to add tasks
+- update tasks
+- delete tasks
+
+A task should have these fields:
+- title
+- description
+- completedDate -> this is the date when the task has been completed
+- done (true or false) -> if the project has been done or not
+
+
+1. First way
+
+The first way will be a non-web project. It will be only node scripts. that you execute with: node start.js
+ The program need to ask you first the operation: add, update, delete
+ Then, depending on the operation:
+ - if it is add: will ask you the fields of the task. and will do the add
+ - if it is update: it will ask you: the id of the task, the new title, description, completed date, done. and will do the update
+ - if it is delete: it will ask you the id of the task. then will do the delete
+
+
+2. Second way
+
+   Second way will be a web project. Use express. Use routes. but do not use nunjucks, nor models, not even database. Do everything in the route function. use a json file to store users.
+
+3. Third way
+
+   Third way will also be a web project. Use express, Use routes. Use also nunjucks. still no need for database. But factor out as much as possible, externalize to other modules, other files and organize in a DRY mode.
