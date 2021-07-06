@@ -1,0 +1,15 @@
+Starting from https://github.com/public-apis/public-apis and clicking to the Music APIs I got to this list of Music related APIs: https://github.com/public-apis/public-apis#music
+
+One that is interesting and we base this exercise on is TasteDive: https://tastedive.com/read/api
+
+This exercise is: Create a webpage, that has a searchbox in which you can enter a music artist/band or a song name.
+Then under it, after user presses search, you display similar artists: with name, description, and youtube link (if API returns youtube link)
+
+Make this as a NodeJS project.
+
+So to succesful complete the exercise you need to complete these stages/steps:
+
+- Read about how to use the API here: https://tastedive.com/read/api and do some testing, with your browser
+- create the html for the search box
+- create the html for displaying the results
+- after pressing search button -> create the page that displays the results
